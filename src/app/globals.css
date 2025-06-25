@@ -40,4 +40,6 @@ body {
   background: var(--primary-white);
   color: var(--typeography-primary);
   font-family: var(--typeography-font), sans-serif;
+
+  overflow-x: hidden;
 }

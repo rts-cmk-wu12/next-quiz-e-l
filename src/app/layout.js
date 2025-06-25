@@ -7,8 +7,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  title: "Quiz App",
-  description: "Our little quiz",
+  title: "TriviaTap",
+  description: "Test your knowledge with our interactive quiz app. Challenge yourself with questions across various categories and difficulty levels. Perfect for learning and entertainment!",
 };
 
 export default function RootLayout({ children }) {
