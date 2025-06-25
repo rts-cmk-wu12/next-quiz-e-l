@@ -37,7 +37,7 @@
 body {
   --typeography-font: var(--font-dm-sans);
 
-  background: var(--primary-white);
-  color: var(--typeography-primary);
+  background: var(--color-pr-white);
+  color: var(--color-primary);
   font-family: var(--typeography-font), sans-serif;
 }
