@@ -1,6 +1,4 @@
 import { IoClose } from "react-icons/io5";
-import Image from 'next/image';
-import backgroundImage from '../assets/background.svg';
 import BackgroundImage from "../components/background-image";
 import Link from "next/link";
 import QuizAnswers from "../components/quiz-answers";
