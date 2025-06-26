@@ -1,6 +1,7 @@
 import { IoClose } from "react-icons/io5";
 import QuizAnswers from "../components/quiz-answers";
 import he from "he";
+import BackgroundImage from "../components/background-image";
 
 async function QuizPage({ searchParams }) {
     const category = (await searchParams).category;
@@ -22,6 +23,7 @@ async function QuizPage({ searchParams }) {
             <main className="p-6">
                 {currentQuestion && (
                     <>
+                        <BackgroundImage />
                         <IoClose size={28} className="fill-pr-white" />
                         <h1 className="text-2xl font-medium text-center text-secondary my-6">{currentQuestion?.category}</h1>
                         <section className="flex flex-col items-center gap-3 py-3 px-6 bg-pr-whiterounded-2xl shadow-[0px_4px_4px_#FBECFF]">
