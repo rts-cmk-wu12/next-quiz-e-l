@@ -45,7 +45,7 @@ export default function HomePage() {
     e.preventDefault();
     
     // Redirect to quiz page with query parameters
-    router.push(`/quiz?amount=${amountValue}&category=${categoryValue}&difficulty=${difficultyValue}`);
+    router.push(`/quiz?amount=${amountValue}&category=${categoryValue}&difficulty=${difficultyValue}&index=0`);
   };
 
   return (
