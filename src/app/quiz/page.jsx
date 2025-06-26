@@ -1,6 +1,7 @@
 import { IoClose } from "react-icons/io5";
 import Image from 'next/image';
 import backgroundImage from '../assets/background.svg';
+import BackgroundImage from "../components/background-image";
 import Link from "next/link";
 import QuizAnswers from "../components/quiz-answers";
 import he from "he";
@@ -15,7 +16,6 @@ async function QuizPage({ searchParams }) {
     const quiz = await response.json() || null;
 
     const currentQuestion = quiz?.results[Number(activeIndex)];
-
     const allAnswers = [...currentQuestion?.incorrect_answers, currentQuestion?.correct_answer];
 
     return (
@@ -23,13 +23,7 @@ async function QuizPage({ searchParams }) {
             <main className="p-6">
                 {currentQuestion && (
                     <>
-                        <div className='absolute z-[-1] w-[90vw] h-[270px] left-[50%] -translate-x-[50%] top-[1rem] rounded-3xl overflow-hidden'>
-                            <Image
-                                className='w-full h-full object-cover'
-                                src={backgroundImage}
-                                alt="Background image"
-                            />
-                        </div>
+                        <BackgroundImage />
                         <Link href='/'><IoClose size={28} className="fill-pr-white ml-2 mt-2" /></Link>
                         <h1 className="text-2xl font-medium text-center text-secondary mt-5">{he.decode(currentQuestion?.category || '')}</h1>
                         <p className="text-center font-medium text-secondary mb-8 capitalize">{currentQuestion?.difficulty}</p>
